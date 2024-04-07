@@ -4,6 +4,8 @@ public class Task1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Choose task (1-10):");
+        int[] arr = {1, 2};
+        System.out.println(returnReversedArray(2, arr));
 
     }
 
@@ -53,6 +55,13 @@ public class Task1 {
             return 1;
         }
         return a * findPower(a, n - 1);
+    }
+
+    public static String returnReversedArray(int size, int[] arr) {
+        if (size == 1) {
+            return Integer.toString(arr[0]);
+        }
+        return arr[size - 1] + " " + returnReversedArray(size - 1, arr);
     }
 
 }
