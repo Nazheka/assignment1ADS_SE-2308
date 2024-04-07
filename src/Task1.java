@@ -3,6 +3,13 @@ import java.util.Scanner;
 public class Task1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Choose task (1-10):");
+        int task = sc.nextInt();
+        switch (task) {
+            case 1:
+
+        }
+
         int size = sc.nextInt();
         int[] arr = new int[size];
         for (int i = 0; i < size; i++) {
@@ -19,5 +26,9 @@ public class Task1 {
             }
         }
         return minNum;
+    }
+
+    public static void (String[] args) {
+
     }
 }
