@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Task1 {
     public static void main(String[] args) {
+        long startTime = System.nanoTime();
         Scanner sc = new Scanner(System.in);
         System.out.println("Choose task (1-10):");
         int input = sc.nextInt();
@@ -18,7 +19,6 @@ public class Task1 {
                     arr[i] = element;
                 }
                 System.out.println(findMinInArray(size, arr));
-                long startTime = System.nanoTime();
                 System.out.println("runtime: "+(double)(System.nanoTime() - startTime)/1000000000+
                         "\ntime complexity: O(n)");
                 break;
