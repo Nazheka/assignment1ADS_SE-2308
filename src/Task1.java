@@ -18,6 +18,9 @@ public class Task1 {
                     arr[i] = element;
                 }
                 System.out.println(findMinInArray(size, arr));
+                long startTime = System.nanoTime();
+                System.out.println("runtime: "+(double)(System.nanoTime() - startTime)/1000000000+
+                        "\ntime complexity: O(n)");
                 break;
             case 2:
                 System.out.println("You are given a number “n” and an array of “n” elements,\n" +
@@ -109,88 +112,132 @@ public class Task1 {
 
     }
 
+    /* Method to find minimum element in an array
+    Time complexity: O(n), where n is input number.
+    The method iterates through each element of the array once to find the minimum value.
+    @param size The number of the size of the array,
+    arr The array sent to a method
+    @return The minimum element of the array found
+     */
     public static int findMinInArray(int size, int[] arr) {
         int minNum = Integer.MAX_VALUE;
         for (int i = 0; i < size; i++) {
+            // Check each element of the array to find the minimum
             if (arr[i] < minNum) {
-                minNum = arr[i];
+                minNum = arr[i]; // Update minimum if the current element is smaller
             }
         }
-        return minNum;
+        return minNum; // Return the minimum element found
     }
 
+    /* Method to find average of elements in an array
+    Time complexity: O(n), where n is input number.
+    The method iterates through each element of the array once to calculate the sum of all elements.
+    @param size The number of the size of the array,
+    arr The array sent to a method
+    @return The average element of the array found
+     */
     public static double findAverageInArray(int size, int[] arr) {
         double sum = 0;
+        // Calculate the sum of all elements in the array
         for (int i = 0; i < size; i++) {
             sum += arr[i];
         }
+        // Calculate and return the average by dividing the sum by the size
         return sum / size;
     }
 
-    public static boolean isPrime (int num) {
-        if (num > 1){
-            for (int i = 2; i < num / 2 ; i++) {
+    /* Method to check if a number is prime
+    Time complexity: O(n/ 2), where n is the input number.
+    In the isPrime method, we check divisibility of the input number num by iterating
+    from 2 to the half of num (num / 2).
+    @param num The number to check if it is prime or not
+    @return True or false
+     */
+    public static boolean isPrime(int num) {
+        if (num > 1) {
+            // Iterate from 2 to num/2 to check if num is divisible by any number
+            for (int i = 2; i < num / 2; i++) {
                 if (num % i == 0) {
-                    return false;
+                    return false; // If divisible, num is not prime
                 }
             }
-            return true;
+            return true; // If not divisible by any number, num is prime
         } else {
-            return false;
+            return false; // 0 and 1 are not prime numbers
         }
     }
 
+    /* Method to find factorial of a number
+    Time complexity: O(n), where n is the input number.
+    The method recursively calls itself n times, each time reducing
+    the value of n by 1 until it reaches the base case (n = 0).
+    @param n The number for which the factorial is to be found
+    @return Factorial of the number
+     */
     public static int findFactorial(int n) {
         if (n == 0) {
-            return 1;
+            return 1; // factorial of 0 is 1
         }
+        // Recursive call to find factorial of n-1, then multiply with n
         return n * findFactorial(n - 1);
     }
 
+    // Method to find Fibonacci number
     public static int findFibonacci(int num) {
         if (num == 0) {
-            return 0;
-        } else if (num == 1){
-            return 1;
+            return 0; // Fibonacci(0) is 0
+        } else if (num == 1) {
+            return 1; // Fibonacci(1) is 1
         }
+        // Recursive call to find Fibonacci(num-1) and Fibonacci(num-2), then sum them
         return findFibonacci(num - 1) + findFibonacci(num - 2);
     }
     public static int findPower(int a, int n) {
         if (n == 1) {
-            return a;
+            return a; // a^1 is a
         } else if (n == 0) {
-            return 1;
+            return 1; // a^0 is 1
         }
+        // Recursive call to find a^(n-1), then multiply with a
         return a * findPower(a, n - 1);
     }
 
+    // Method to reverse an array
     public static String returnReversedArray(int size, int[] arr) {
         if (size == 1) {
-            return Integer.toString(arr[0]);
+            return Integer.toString(arr[0]); // Single element array, return its value
         }
+        // Recursive call to reverse the remaining elements of the array and append the current element
         return arr[size - 1] + " " + returnReversedArray(size - 1, arr);
     }
 
+    // Method to check if a string consists only of digits
     public static boolean isFullDigits(String str) {
         if (str.isEmpty()) {
-            return true;
+            return true; // Empty string, return true
         } else if (!Character.isDigit(str.charAt(0))) {
-            return false;
+            return false; // Non-digit character found, return false
         }
+        // Recursive call to check the remaining characters of the string
         return isFullDigits(str.substring(1));
     }
 
+    // Method to compute the binomial coefficient
     public static int findBinomialCoefficient(int n, int k) {
         if (k == 0 || n == k) {
-            return 1;
+            return 1; // C(n, 0) and C(n, n) are both 1
         }
+        // Recursive call to compute C(n-1, k-1) and C(n-1, k), then sum them
         return findBinomialCoefficient(n - 1, k - 1) + findBinomialCoefficient(n - 1, k);
     }
 
+    // Method to find the greatest common divisor (GCD) using recursion (Euclidean Algorithm)
     public static int findGCD(int n, int k) {
-            if (k == 0) {
-                return n;
-            }
-            return findGCD(k, n % k);
+        if (k == 0) {
+            return n; // If k is 0, then n is the GCD
+        }
+        // Recursive call with arguments (k, n % k)
+        return findGCD(k, n % k);
     }
 }
