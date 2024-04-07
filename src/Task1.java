@@ -69,4 +69,8 @@ public class Task1 {
         }
         return isFullDigits(str.substring(1));
     }
+
+    public static void main(String[] args) {
+
+    }
 }
