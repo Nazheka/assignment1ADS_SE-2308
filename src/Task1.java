@@ -4,9 +4,6 @@ public class Task1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Choose task (1-10):");
-        int[] arr = {1, 2};
-        System.out.println(returnReversedArray(2, arr));
-
     }
 
     public static int findMinInArray(int size, int[] arr) {
@@ -64,4 +61,12 @@ public class Task1 {
         return arr[size - 1] + " " + returnReversedArray(size - 1, arr);
     }
 
+    public static boolean isFullDigits(String str) {
+        if (str.isEmpty()) {
+            return true;
+        } else if (!Character.isDigit(str.charAt(0))) {
+            return false;
+        }
+        return isFullDigits(str.substring(1));
+    }
 }
