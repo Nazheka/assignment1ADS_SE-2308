@@ -34,6 +34,8 @@ public class Task1 {
                     arr1[i] = element;
                 }
                 System.out.println(findAverageInArray(size, arr1));
+                System.out.println("runtime: "+(double)(System.nanoTime() - startTime)/1000000000+
+                        "\ntime complexity: O(n)");
                 break;
             case 3:
                 System.out.println("You are given a number “n”, write the function for checking\n" +
@@ -42,6 +44,8 @@ public class Task1 {
                 int num = sc.nextInt();
                 String result = isPrime(num) ? "Prime" : "Composite";
                 System.out.println(result);
+                System.out.println("runtime: "+(double)(System.nanoTime() - startTime)/1000000000+
+                        "\ntime complexity: O(n / 2)");
                 break;
             case 4:
                 System.out.println("You are given a number “n”, write the program using recursion for\n" +
@@ -49,6 +53,8 @@ public class Task1 {
                 System.out.println("write your number: ");
                 int fact = sc.nextInt();
                 System.out.println(findFactorial(fact));
+                System.out.println("runtime: "+(double)(System.nanoTime() - startTime)/1000000000+
+                        "\ntime complexity: O(n)");
                 break;
             case 5:
                 System.out.println("You are given a number “n”, write the function for finding n-th\n" +
@@ -57,6 +63,8 @@ public class Task1 {
                 System.out.println("write your number: ");
                 int fib = sc.nextInt();
                 System.out.println(findFibonacci(fib));
+                System.out.println("runtime: "+(double)(System.nanoTime() - startTime)/1000000000+
+                        "\ntime complexity: O(2^n)");
                 break;
             case 6:
                 System.out.println("You are given numbers “a” and “n”, write the function that\n" +
@@ -67,6 +75,8 @@ public class Task1 {
                 System.out.println("write your power number: ");
                 int power = sc.nextInt();
                 System.out.println(findPower(base, power));
+                System.out.println("runtime: "+(double)(System.nanoTime() - startTime)/1000000000+
+                        "\ntime complexity: O(n)");
                 break;
             case 7:
                 System.out.println("You are given a number “n” and an array of “n” elements,\n" +
@@ -80,6 +90,8 @@ public class Task1 {
                     arr2[i] = sc.nextInt();
                 }
                 System.out.println(returnReversedArray(size, arr2));
+                System.out.println("runtime: "+(double)(System.nanoTime() - startTime)/1000000000+
+                        "\ntime complexity: O(n)");
                 break;
             case 8:
                 System.out.println("You are given a string “s”, write the function for checking\n" +
@@ -89,6 +101,8 @@ public class Task1 {
                 String str = sc.nextLine();
                 result = isFullDigits(str) ? "Yes" : "No";
                 System.out.println(result);
+                System.out.println("runtime: "+(double)(System.nanoTime() - startTime)/1000000000+
+                        "\ntime complexity: O(n)");
                 break;
             case 9:
                 System.out.println("You are given numbers“n” and “k”,write the program that\n" +
@@ -98,6 +112,8 @@ public class Task1 {
                 System.out.println("write second coefficient");
                 int coeff2 = sc.nextInt();
                 System.out.println(findBinomialCoefficient(coeff1, coeff2));
+                System.out.println("runtime: "+(double)(System.nanoTime() - startTime)/1000000000+
+                        "\ntime complexity: O(2^n)");
                 break;
             case 10:
                 System.out.println("You are given “a” and “b”, write the function for finding\n" +
@@ -107,6 +123,8 @@ public class Task1 {
                 System.out.println("write second coefficient");
                 coeff2 = sc.nextInt();
                 System.out.println(findGCD(coeff1, coeff2));
+                System.out.println("runtime: "+(double)(System.nanoTime() - startTime)/1000000000+
+                        "\ntime complexity: O(log(a, b)");
                 break;
         }
 
