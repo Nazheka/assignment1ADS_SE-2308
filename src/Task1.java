@@ -183,7 +183,13 @@ public class Task1 {
         return n * findFactorial(n - 1);
     }
 
-    // Method to find Fibonacci number
+    /* Method to find Fibonacci number
+    Time complexity: O(2^n), where n is input number.
+    Each recursive call results in two additional recursive calls, one for
+    findFibonacci(num - 1) and one for findFibonacci(num - 2).
+    @param num The n-th number of the Fibonacci sequence to find
+    @return The number of the Fibonacci sequence
+     */
     public static int findFibonacci(int num) {
         if (num == 0) {
             return 0; // Fibonacci(0) is 0
@@ -193,6 +199,13 @@ public class Task1 {
         // Recursive call to find Fibonacci(num-1) and Fibonacci(num-2), then sum them
         return findFibonacci(num - 1) + findFibonacci(num - 2);
     }
+    /* Method to find power of some number
+    Time complexity: O(n), where n is the input number.
+    Each recursive call results in a reduction of the exponent n by 1 until it reaches the base case (n = 1).
+    @param a The base of the power number
+    n The number to raise a base to
+    @return number to a n-th power
+     */
     public static int findPower(int a, int n) {
         if (n == 1) {
             return a; // a^1 is a
@@ -203,7 +216,14 @@ public class Task1 {
         return a * findPower(a, n - 1);
     }
 
-    // Method to reverse an array
+    /* Method to reverse an array
+    Time complexity: O(n), where n is the input number.
+    In each recursive call, it handles one element of the array.
+    @param size The number of the size of the array,
+    arr The array sent to a method
+    @return Reversed array
+     */
+
     public static String returnReversedArray(int size, int[] arr) {
         if (size == 1) {
             return Integer.toString(arr[0]); // Single element array, return its value
@@ -212,7 +232,13 @@ public class Task1 {
         return arr[size - 1] + " " + returnReversedArray(size - 1, arr);
     }
 
-    // Method to check if a string consists only of digits
+    /* Method to check if a string consists only of digits
+    O(n), where n is the input number.
+    In each recursive call, it checks one character of the string.
+    @param str The string to check if it is full digits
+    @return True or false
+     */
+
     public static boolean isFullDigits(String str) {
         if (str.isEmpty()) {
             return true; // Empty string, return true
@@ -223,7 +249,14 @@ public class Task1 {
         return isFullDigits(str.substring(1));
     }
 
-    // Method to compute the binomial coefficient
+    /* Method to compute the binomial coefficient
+    Time complexity: O(2^n), where n is the input number
+    Each recursive call results in two additional recursive calls, one for
+    findBinomialCoefficient(n - 1, k - 1) and one for findBinomialCoefficient(n - 1, k).
+    @param n The first coefficient of binomial coefficient
+    k The second one
+    @result The result of binomial coefficient
+     */
     public static int findBinomialCoefficient(int n, int k) {
         if (k == 0 || n == k) {
             return 1; // C(n, 0) and C(n, n) are both 1
@@ -232,7 +265,13 @@ public class Task1 {
         return findBinomialCoefficient(n - 1, k - 1) + findBinomialCoefficient(n - 1, k);
     }
 
-    // Method to find the greatest common divisor (GCD) using recursion (Euclidean Algorithm)
+    /* Method to find the greatest common divisor (GCD) using recursion (Euclidean Algorithm)
+    Time complexity: O(log(a, b)), where a and b are input numbers
+    @param n The first number of GCD to find
+    k The second one
+    @result the GCD of two numbers
+     */
+
     public static int findGCD(int n, int k) {
         if (k == 0) {
             return n; // If k is 0, then n is the GCD
