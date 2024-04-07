@@ -4,6 +4,7 @@ public class Task1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Choose task (1-10):");
+        System.out.println(findBinomialCoefficient(7, 3));
     }
 
     public static int findMinInArray(int size, int[] arr) {
@@ -70,7 +71,17 @@ public class Task1 {
         return isFullDigits(str.substring(1));
     }
 
-    public static void main(String[] args) {
+    public static int findBinomialCoefficient(int n, int k) {
+        if (k == 0 || n == k) {
+            return 1;
+        }
+        return findBinomialCoefficient(n - 1, k - 1) + findBinomialCoefficient(n - 1, k);
+    }
 
+    public static int findGCD(int n, int k) {
+            if (k == 0) {
+                return n;
+            }
+            return findGCD(k, n % k);
     }
 }
