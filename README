@@ -1,1 +1,20 @@
+This is the assignment 1 of algorithms and Data Structures from Akezhan Bakytzhanov SE-2308
+This Java program contains a menu which has 10 tasks from assssignment you can pick by writng a nummber from 1 to 10. 
+After that you will be given task's information and what you should input from keyboard. 
+After your input the results will display including time complexity and runtime.
+Tasks contain recursions and math formulas. 
+Each task contain comments about code and time complexity. 
 
+Here is a brief overview of all functions:
+`findMinInArray`: O(n) - Iterates through each element of the array once to find the minimum value.
+`findAverageInArray`: O(n) - Calculates the sum of all elements in the array, iterating through each element once.
+`isPrime`: O(sqrt(n)) - Checks divisibility up to the square root of the input number.
+`findFactorial`: O(n) - Uses recursion to calculate the factorial of the input number.
+`findFibonacci`: O(2^n) - Uses recursion to calculate Fibonacci numbers.
+`findPower`: O(n) - Uses recursion to calculate the power of a number.
+`returnReversedArray`: O(n) - Uses recursion to reverse the elements of an array.
+`isFullDigits`: O(n) - Uses recursion to check if each character in a string is a digit.
+`findBinomialCoefficient`: O(2^n) - Uses recursion to calculate binomial coefficients.
+`findGCD`: O(log(min(a, b))) - Uses the Euclidean Algorithm to find the greatest common divisor.
+
+ 
