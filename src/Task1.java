@@ -4,7 +4,7 @@ public class Task1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Choose task (1-10):");
-        System.out.println(findFibonacci(5));
+
     }
 
     public static int findMinInArray(int size, int[] arr) {
@@ -45,6 +45,14 @@ public class Task1 {
             return 1;
         }
         return findFibonacci(num - 1) + findFibonacci(num - 2);
+    }
+    public static int findPower(int a, int n) {
+        if (n == 1) {
+            return a;
+        } else if (n == 0) {
+            return 1;
+        }
+        return a * findPower(a, n - 1);
     }
 
 }
