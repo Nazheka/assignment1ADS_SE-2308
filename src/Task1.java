@@ -135,7 +135,7 @@ public class Task1 {
     The method iterates through each element of the array once to find the minimum value.
     @param size The number of the size of the array,
     arr The array sent to a method
-    @return The minimum element of the array found
+    @return The minimum element of the array founds
      */
     public static int findMinInArray(int size, int[] arr) {
         int minNum = Integer.MAX_VALUE;
